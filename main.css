@@ -208,6 +208,10 @@ nav.barMenu>ul>li:hover {
     height: 40px;
 }
 
+.activeP {
+    height: 40px !important;
+}
+
 nav.barMenu>ul>li>span {
     transition: .6s;
     cursor: pointer;
@@ -218,6 +222,11 @@ nav.barMenu>ul>li>span {
 nav.barMenu>ul>li:hover span {
     font-size: 18px;
     transform: translate(22px, -2px);
+}
+
+.activeP span {
+    font-size: 18px !important;
+    transform: translate(22px, -2px) !important;
 }
 
 ul.ulPages {
@@ -267,19 +276,25 @@ nav.barMenu>ul>li.liUl:hover {
     overflow: visible;
 }
 
+.activeP.liUl {
+    /* max-height: 0 !important; */
+}
+
 nav.barMenu>ul>li.liUl:hover ul.ulPages {
     max-height: 200px;
 }
 
-nav.barMenu>ul>li:hover::before {
-    width: 100%;
+nav.barMenu>ul>li:hover::before,
+.activeP::before {
+    width: 100% !important;
 }
 
-nav.barMenu>ul>li:hover::after {
-    width: 0px;
-    height: 5px;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
+nav.barMenu>ul>li:hover::after,
+.activeP::after {
+    width: 0px !important;
+    height: 5px !important;
+    transform: translate(-50%, -50%) !important;
+    border-radius: 50% !important;
 }
 
 nav.barMenu>ul>li>a {
@@ -293,8 +308,9 @@ nav.barMenu>ul>li>a {
     position: relative;
 }
 
-nav.barMenu>ul>li:hover>a {
-    transform: translateY(-15px);
+nav.barMenu>ul>li:hover>a,
+.activeP>a {
+    transform: translateY(-15px) !important;
 }
 
 .headBut {
@@ -490,21 +506,25 @@ button.goUp i {
         transform: translateY(0px);
     }
 
-    nav.barMenu>ul>li:hover>a {
-        transform: translateY(0px);
+    nav.barMenu>ul>li:hover>a,
+    .activeP>a {
+        transform: translateY(0px) !important;
     }
 
-    nav.barMenu>ul>li:hover {
+    nav.barMenu>ul>li:hover,
+    .activeP {
         background: lightgrey;
         height: 30px;
     }
 
-    nav.barMenu>ul>li:hover::after {
+    nav.barMenu>ul>li:hover::after,
+    .activeP ::after {
         width: 100%;
         height: 1px;
     }
 
-    nav.barMenu>ul>li:hover::before {
+    nav.barMenu>ul>li:hover::before,
+    .activeP::before {
         width: 0%;
     }
 

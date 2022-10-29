@@ -471,6 +471,7 @@ button.goUp i {
     cursor: pointer;
     position: relative;
     z-index: 100;
+    right:10px;
 }
 
 @media only screen and (max-width:770px) {

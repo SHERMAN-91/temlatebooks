@@ -83,6 +83,7 @@ button.take a {
 
 .textExple {
     margin: 40px auto;
+    overflow:hidden;
 }
 
 .allBoxImgServic {
